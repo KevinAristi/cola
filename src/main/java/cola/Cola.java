@@ -4,12 +4,36 @@
  */
 package cola;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author kevin.aristizabal
  */
 public class Cola <T extends Base >{
     
+    private LinkedList<T>elementos;
     
+    public Cola(){
+        
+        elementos = new LinkedList();
+        
+    }
+    
+    public void encolar(T elemnto){
+        
+        elementos.addLast(elemnto);
+    
+    }
+    
+    public T desencolar(){
+        
+        return elementos.removeFirst();
+    }
+    
+    public boolean estaVacia(){
+        
+        return elementos.isEmpty();
+    }
     
 }
