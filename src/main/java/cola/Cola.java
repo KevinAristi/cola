@@ -20,9 +20,9 @@ public class Cola <T extends Base >{
         
     }
     
-    public void encolar(T elemnto){
+    public void encolar(T elemento){
         
-        elementos.addLast(elemnto);
+        elementos.addLast(elemento);
     
     }
     
@@ -35,5 +35,18 @@ public class Cola <T extends Base >{
         
         return elementos.isEmpty();
     }
+
+    @Override
+    public String toString() {
+        String cad = "[";
+        for (T e: elementos){   
+            cad+= " "+e.toString();
+        
+        }
+        
+        return cad + "]";
+    }
+    
+    
     
 }
